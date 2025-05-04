@@ -655,6 +655,166 @@ section p{
     margin-left: 50px;
     margin-right: 50px;
 }
+/*for mobile compatibility*/
+
+@media screen and (max-width: 768px) {
+    /* Keep navbar layout same but adjust padding and font for readability */
+    nav {
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    nav .logo {
+        font-size: 22px;
+    }
+
+    nav .menu a {
+        padding: 10px 12px;
+        font-size: 16px;
+    }
+
+    /* Adjust spacing for sections */
+    section {
+        margin-top: 90px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .overview-col,
+    .key-col,
+    .about-col,
+    .pg-col1,
+    .pg-col2,
+    .pg-col3,
+    .pg-col4,
+    .pg-col5 {
+        flex-basis: 100%;
+        padding: 15px 0;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .main-title {
+        font-size: 1.5rem;
+    }
+
+    .main-description {
+        font-size: 0.95rem;
+    }
+
+    .sub-header,
+    .subhead {
+        height: 40vh;
+    }
+
+    .about-col img,
+    .pg-col1 img,
+    .pg-col2 img,
+    .pg-col3 img,
+    .pg-col4 img,
+    .pg-col5 img {
+        margin-top: 20px;
+    }
+
+    .overview,
+    .layout,
+    .pmi,
+    .about,
+    #group-about {
+        width: 90%;
+        padding-top: 40px;
+    }
+
+    .pmi {
+        padding: 60px 0;
+    }
+
+    .feature-card {
+        padding: 1rem;
+    }
+
+    .footer {
+        padding: 20px 0;
+    }
+
+    .footer h1 {
+        font-size: 18px;
+    }
+
+    .footer-content p {
+        font-size: 14px;
+    }
+
+    .icons a img {
+        width: 22px;
+        height: 22px;
+        margin: 0 8px;
+    }
+}
+
+/*sidebar toggle*/
+
+@media (max-width: 768px) {
+    /* Sidebar hidden by default */
+    .sidebar {
+      width: 250px;
+      position: fixed;
+      height: 100%;
+      background: inherit;
+      left: -250px;
+      top: 0;
+      transition: left 0.3s ease;
+      z-index: 1000;
+      padding-top: 60px;
+    }
+  
+    /* Show sidebar when checkbox is checked */
+    #sidebar-toggle:checked + .open-btn + .sidebar {
+      left: 0;
+    }
+  
+    /* Hamburger icon */
+    .open-btn {
+      display: block;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      font-size: 24px;
+      color: inherit;
+      background: transparent;
+      padding: 8px 12px;
+      z-index: 1100;
+      cursor: pointer;
+    }
+  
+    /* Push content when sidebar opens */
+    #sidebar-toggle:checked ~ .content {
+      margin-left: 250px;
+      transition: margin-left 0.3s ease;
+    }
+  
+    /* Default content style on mobile */
+    .content {
+      margin-left: 0;
+      padding: 20px;
+      transition: margin-left 0.3s ease;
+    }
+  .out-header{
+    background-position: center top;  /* Focus on the top part */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh; /* Or set a fixed height like 300px */
+    overflow: hidden;
+  }
+}
 
 
 
