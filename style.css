@@ -618,7 +618,7 @@ section p{
 .out-header{
     height: 70vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.559),rgba(4, 9, 30, 0.453)),url(images/feedback.webp);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.559),rgba(4, 9, 30, 0.453)),url(images/feedback.png);
     background-position: center;
     background-size: cover;
     text-align: center;
